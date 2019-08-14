@@ -39,7 +39,8 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     //Select Image
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let editedImage: UIImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+        if let editedImage: UIImage =
+            info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             self.imageView.image = editedImage
             UserInformation.shared.profileImage = self.imageView.image
             determineButtonState() //profileImage도 필수조건으로
